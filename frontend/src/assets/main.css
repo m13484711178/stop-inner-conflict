@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #4F46E5;
+  --secondary: #10B981;
+  --accent: #F59E0B;
+  --danger: #EF4444;
+  --dark: #1F2937;
+  --light: #F3F4F6;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-secondary/90;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary/10;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-6;
+}
+
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50;
+}
+
+.radio-group {
+  @apply flex flex-wrap gap-2;
+}
+
+.radio-option {
+  @apply flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50;
+}
+
+.radio-option input[type="radio"] {
+  @apply accent-primary;
+}
+
+.radio-option.selected {
+  @apply border-primary bg-primary/10;
+}
+
+.loading {
+  @apply flex justify-center items-center gap-2 text-primary;
+}
+
+.loading::after {
+  content: '';
+  @apply w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin;
+}
+
+.result-card {
+  @apply bg-white rounded-xl shadow-md p-6 mb-4;
+}
+
+.result-item {
+  @apply flex justify-between items-center py-2 border-b border-gray-100 last:border-0;
+}
+
+.result-score {
+  @apply font-bold text-lg;
+}
+
+.result-level {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.result-level.light {
+  @apply bg-green-100 text-green-800;
+}
+
+.result-level.medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.result-level.heavy {
+  @apply bg-red-100 text-red-800;
+}
+
+.radar-chart {
+  @apply w-full h-64;
+}
+
+.advice-item {
+  @apply bg-blue-50 rounded-lg p-4 mb-3 border-l-4 border-primary;
+}
+
+.advice-item h4 {
+  @apply font-semibold mb-1;
+}
+
+.advice-item p {
+  @apply text-sm text-gray-600;
+}
+
+.emergency-package {
+  @apply flex flex-col items-center justify-center min-h-[60vh] text-center;
+}
+
+.emergency-image {
+  @apply w-64 h-64 object-cover rounded-xl mb-6;
+}
+
+.emergency-quote {
+  @apply text-lg font-medium mb-6 max-w-lg;
+}
+
+.music-player {
+  @apply w-full max-w-md mt-6;
+}
+
+.music-player audio {
+  @apply w-full;
+}
+
+.mental-aid {
+  @apply card;
+}
+
+.mental-aid-item {
+  @apply flex items-center gap-3 py-3 border-b border-gray-100 last:border-0;
+}
+
+.mental-aid-item a {
+  @apply text-primary hover:underline;
+}
+
+.mental-aid-item button {
+  @apply btn btn-primary text-sm;
+}
+
+.admin-login {
+  @apply min-h-screen flex items-center justify-center p-4;
+}
+
+.admin-login form {
+  @apply card max-w-md w-full;
+}
+
+.admin-login h2 {
+  @apply text-2xl font-bold mb-4 text-center;
+}
+
+.admin-login .form-group {
+  @apply mb-4;
+}
+
+.admin-login label {
+  @apply block mb-2 font-medium;
+}
+
+.admin-dashboard {
+  @apply min-h-screen bg-gray-50;
+}
+
+.admin-header {
+  @apply bg-white shadow-sm py-4 px-6 flex justify-between items-center;
+}
+
+.admin-sidebar {
+  @apply bg-white shadow-sm w-64 min-h-screen p-4;
+}
+
+.admin-sidebar ul {
+  @apply space-y-2;
+}
+
+.admin-sidebar li a {
+  @apply flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100;
+}
+
+.admin-content {
+  @apply flex-1 p-6;
+}
+
+.admin-page {
+  @apply flex;
+}
+
+.table {
+  @apply w-full bg-white rounded-lg shadow-sm;
+}
+
+.table th {
+  @apply px-4 py-3 text-left font-semibold text-gray-600 border-b;
+}
+
+.table td {
+  @apply px-4 py-3 border-b;
+}
+
+.table tr:last-child td {
+  @apply border-0;
+}
+
+.form {
+  @apply bg-white rounded-lg shadow-sm p-6;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-group label {
+  @apply block mb-2 font-medium;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  @apply input;
+}
+
+.form-actions {
+  @apply flex gap-2 mt-6;
+}
+
+.success-message {
+  @apply bg-green-100 text-green-800 px-4 py-2 rounded-lg mb-4;
+}
+
+.error-message {
+  @apply bg-red-100 text-red-800 px-4 py-2 rounded-lg mb-4;
+}
